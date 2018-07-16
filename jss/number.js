@@ -80,6 +80,94 @@ num = getuserinput();
 }
 
 
+function palindrome()
+{
+   num1 = getuserinput1();
+   var a,b,temp=0;
+
+b=num1;
+   while(num1>0)
+   {
+     a=num1%10;
+     num1=parseInt(num1/10);
+     temp=temp*10+a;
+    }
+  if(temp==b)
+   {
+     showresult(" Given number "+b+" is  palindrome");  
+    }
+   else
+   {
+   showresult(" Given number "+b+" isnot  palindrome");  
+
+}
+    
+}
+
+
+
+
+
+function reverse()
+{
+   num1 = getuserinput1();
+     var a,b,temp=0;
+
+b=num1;
+      while(num1>0)
+      {
+        a=num1%10;
+        num1=parseInt(num1/10);
+        temp=temp*10+a;
+       }
+    showresult(" Reverse of number "+b+" is "+temp);  
+    
+}
+
+
+
+function sumofdigits()
+{
+   num1 = getuserinput1();
+    var a,b,temp=0
+
+b=num1;
+        while(num1 != 0)
+       {
+         a = num1 % 10;
+          temp = temp+a;
+           num1=Math.floor(num1/10);
+         }
+   showresult("Sum of "+b+" is number "+temp);  
+    
+}
+
+
+
+function sumoftwo()
+{
+   num1=getuserinput1();
+    var sum=0;
+    sum=num1;
+    while(num1 != 0)
+        {
+            sum =  Math.floor(num/10); + Math.floor(num%10);
+            num1 = sum;
+        }
+    showresult("Result 0f "+num1+ " is : "+sum);
+}
+
+
+
+
+
+
+function getuserinput1()
+{
+num1 = document.getElementById("num1").value;
+    return num1;
+}
+
 
 
 function getuserinput()
